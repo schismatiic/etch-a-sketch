@@ -1,7 +1,13 @@
 const boxClass = document.getElementById("box");
 const tux = document.getElementById("tux");
+const rowColumn = document.getElementById("row__column");
+rowColumn.addEventListener("click", () => {
+  const rc = prompt("???");
+  addGrid(rc);
+  window.location.href = "index.html";
+});
 
-const addRow = (index = 16) => {
+const addGrid = (index = 16) => {
   for (let i = 0; i < index; i++) {
     boxClass.style.cssText = "flex-direction: row";
     const rowDiv = document.createElement("div");
@@ -21,4 +27,4 @@ const addRow = (index = 16) => {
     }
   }
 };
-addRow(24);
+addGrid();
